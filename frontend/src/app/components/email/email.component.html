@@ -1,0 +1,37 @@
+<div class="div container ">
+    <div class="card">
+
+         <form (ngSubmit)="doSubmitForm()" action=""><!-- this function is defined in email.component.ts -->
+
+            <h1>Compose mail. . . </h1>
+
+            <mat-form-field class="field" appearance="outline">
+                <mat-label>To</mat-label>
+                <input name="to" [(ngModel)]="data.to" matInput>
+            </mat-form-field>
+
+            <mat-form-field class="field" appearance="outline">
+                <mat-label>Subject</mat-label>
+                <input name="subject" [(ngModel)]="data.subject" matInput>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width field">
+                <mat-label>Enter your messsage</mat-label>
+                <textarea name="message" [(ngModel)]="data.message" rows="5" matInput placeholder="Hey! What are you doing guys. . ."></textarea>
+            </mat-form-field>
+
+            <div class="text-center">
+
+                <mat-spinner *ngIf="flag" style="margin: auto;"></mat-spinner>
+
+
+                <button [disabled]="flag" type="submit" mat-raised-button color="primary">SUBMIT</button>
+                <button type="reset" mat-raised-button color="accent">RESET</button>
+            </div>
+
+        </form>
+
+      <!--  {{  data | json }}  --> <!-- to use json here, CommonModule must be imported in email.ts -->
+
+    </div> 
+</div>
