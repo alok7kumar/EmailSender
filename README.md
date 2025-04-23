@@ -18,18 +18,18 @@ This is a **fullstack email-sending application** built with **Angular (Frontend
 
 ## 📁 Project Structure
 
-
+    
 ```
-EmailSender/
-├── backend-emailapi/         # Spring Boot Backend
-│   ├── src/
-│   ├── pom.xml
-│   └── application.properties
-│
-└── frontend/                 # Angular Frontend
-    ├── src/
-    ├── angular.json
-    └── package.json
+    EmailSender/
+    ├── backend-emailapi/         # Spring Boot Backend
+    │   ├── src/
+    │   ├── pom.xml
+    │   └── application.properties
+    │
+    └── frontend/                 # Angular Frontend
+        ├── src/
+        ├── angular.json
+        └── package.json
 ```
 ---
 
@@ -43,19 +43,12 @@ EmailSender/
    cd backend-emailapi
 
 2. Configure your email credentials in src/main/resources/application.properties:
-
+    #### 🔧 `application.properties`
+    ```
     spring.mail.host=smtp.gmail.com
-   
-    spring.mail.port=587
-   
     spring.mail.username=your_email@gmail.com
-
-   spring.mail.password=your_app_password
-
-    spring.mail.properties.mail.smtp.auth=true
-
-    spring.mail.properties.mail.smtp.starttls.enable=true
-
+    spring.mail.password=your_app_password        #use app password ,not real gmail password
+    ```
 
 4. Run the application:
 
